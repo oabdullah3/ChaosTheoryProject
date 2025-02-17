@@ -19,11 +19,10 @@ The Chaos Theory Wallet Transaction History Viewer is a full-stack application t
 1. Navigate to the backend directory: `cd backend`
 2. Install dependencies: `npm install`
 3. Create a `.env` file with the required environment variables
-    MONGODB_USERNAME = wallet-transaction-viewer
-    MONGODB_PASSWORD = F9vV4nfLcMyztyqZ
-    ETHERSCAN_API_KEY = A8I3QIYT3A4B4NSKSWZ4SK9PKFSRSA27XW
-    ALCHEMY_API_KEY = gvNEo3KBWhyBiclvkOADJKoJgjdOqmbg
-    PORT = 8000
+    - MONGODB_USERNAME = wallet-transaction-viewer
+    - MONGODB_PASSWORD = F9vV4nfLcMyztyqZ
+    - ETHERSCAN_API_KEY = A8I3QIYT3A4B4NSKSWZ4SK9PKFSRSA27XW
+    - ALCHEMY_API_KEY = gvNEo3KBWhyBiclvkOADJKoJgjdOqmbg
 4. Start the development server: `npm run dev`
 5. Open browser and navigate to `http://localhost:{PORT}` to access the application
 
