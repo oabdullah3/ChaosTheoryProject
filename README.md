@@ -55,20 +55,19 @@ The Chaos Theory Wallet Transaction History Viewer is a full-stack application t
 ## How the backend works
 - The typescript backend uses express.static to serve the front-end build. It also use an app.get endpoint to serve all non-API calls (all calls that dont start with /api) the index.html file that was obtained after building the react front-end
 - It connects to a MongoDB atlas cluster using the cluster's connection string to create a client through MongoClient and then connecting to the client through client.connect().
-- The backend has 2 API endpoints.
- Get Transactions:
+- Get Transactions API endpoint:
     1. This endpoints takes in search address and user address as query parameters.
     2. It uses the etherscan api to RESTfully fetch all transaction data on the ETH mainnet corresponding to the search address.
     3. It then maps the each of the returned transactions to a simplified transaction object which only contains the hash, from+to address, value, and timeStamp.
     4. During the mapping process, the from/to address are searched up in the database to check for any defined by the user address for these addresses.
     5. If tags are found they are assigned to the from/to address instead. The simplified transaction array is returned by the API.
-  Post Tag:
+- Post Tag API endpoint:
     1. This endpoint takes in address, newTag, signer, message, signature as body parameters.
     2. The ethers.verifyMessage method takes in message+signature and returns the signer address.
     3. If this is the same as the signer parameter value then the user is successfully validated.
     4. After validation there are two scenarios: Either the address is being tagged for the first time or the address has an existing tag being changed.
     5. Both these cases are handled via MongoDB querying logic to succcessfully update the tag information in the database.
-- The backend also has a WebSocket mecahnism
+- WebSocket Server
     1. The express app and the http module are used to create a server, which is in turn used to create the WebSocket server.
     2. When a user connects to this websocket server, several functions are defined for this webscoket connection.
     3. When the user sends a message to the websocket (which in our case is only when sending the user address and search address), an alchemy instance is created.
