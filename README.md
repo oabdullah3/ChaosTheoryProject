@@ -33,7 +33,7 @@ The Chaos Theory Wallet Transaction History Viewer is a full-stack application t
 
 ## Technologies Used
 - **Backend**: Node.js, TypeScript, Express
-- **Frontend**: React, Vite, Web3.js
+- **Frontend**: React, Vite
 - **Styling**: CSS
 - **Web3 APIs**: EtherscanAPI, Alchemy web-sdk
 
