@@ -1,4 +1,4 @@
-# Chaos Theory Wallet Transaction History Viewer
+# Crypto Wallet Transaction History Viewer
 
 ![image](https://github.com/user-attachments/assets/4a9168cd-6002-4b3e-866e-6fea081aad1d)
 
